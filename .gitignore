@@ -1,0 +1,7 @@
+# Python virtual environment
+.venv/
+__pycache__/
+
+# Raw data and local database outputs
+data/raw/
+*.db
