@@ -1,4 +1,6 @@
-# E-Commerce Sales & Delivery Performance Analysis (Olist)
+# E-Commerce Sales Analysis (Olist)
+
+![CI Status](https://github.com/Flashters/olist-sales-analysis/actions/workflows/ci.yml/badge.svg)
 
 An end-to-end data project exploring Brazilian e-commerce data to uncover revenue trends, top-performing product categories, and the operational impact of delivery delays on customer satisfaction.
 
@@ -45,3 +47,18 @@ The Python pipeline (`analysis.py`) creates custom analytical features to drive 
 * **DAX (Data Analysis Expressions):** Custom formula language used in Power BI (e.g., `SUM`, `DISTINCTCOUNT`, `DIVIDE`) to create dynamic metrics.
 * **SQL Window Functions:** Advanced SQL features (like `RANK()` or `ROW_NUMBER()`) that perform calculations across groups of rows without collapsing the dataset.
 * **SQLite:** A lightweight, serverless file-based database (`olist.db`) used to run standard SQL queries locally without requiring database infrastructure.
+
+---
+
+## 🏗️ Analytics & ETL Workflow Architecture
+```text
+[Olist Raw CSV Files] (Customers, Orders, Items, Reviews)
+         │
+         ▼
+[Data Ingestion & Cleaning] (`analysis.py` / Pandas)
+         │
+         ▼
+[Metric Aggregation] (Monthly Revenue, AOV, State/Category Rankings, Delivery Delay Impact)
+         │
+         ▼
+[Executive Dashboards & Reports] (Power BI `.pbix` & Visual Export Artifacts)
